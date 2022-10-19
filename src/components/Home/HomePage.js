@@ -10,8 +10,8 @@ const HomePage = () => {
   return (
     <>
       <Head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link rel="preload" href="https://fonts.googleapis.com" />
+        <link rel="preload" href="https://fonts.gstatic.com" crossorigin />
         <link
           href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500&family=Plus+Jakarta+Sans:ital,wght@0,800;1,700&display=swap"
           rel="stylesheet"
