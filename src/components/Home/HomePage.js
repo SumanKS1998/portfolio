@@ -3,6 +3,7 @@ import { Box, Stack } from "@mui/system";
 import React from "react";
 import CodeIcon from "@mui/icons-material/Code";
 import MailIcon from "@mui/icons-material/Mail";
+import Head from 'next/head'
 import CallMadeIcon from "@mui/icons-material/CallMade";
 import ArrowForward from "@mui/icons-material/ArrowForward";
 const HomePage = () => {
@@ -14,9 +15,7 @@ const HomePage = () => {
         <link
           href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500&family=Plus+Jakarta+Sans:ital,wght@0,800;1,700&display=swap"
           rel="stylesheet"
-        >
-          {" "}
-        </link>
+        />
       </Head>
       <Stack
         height="80vh"
