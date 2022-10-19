@@ -76,7 +76,7 @@ const HomePage = () => {
         </Stack>
       </Box>
       <Stack
-      gap={4}
+        gap={4}
         sx={{
           position: "absolute",
           top: "40%",
@@ -118,7 +118,7 @@ const HomePage = () => {
       >
         <Box
           component="img"
-          src="/images/linkedIn.png"
+          src="/images/linkedin.png"
           sx={{ width: "50px", position: "absolute", right: 145, top: -30 }}
         />
         <Box
