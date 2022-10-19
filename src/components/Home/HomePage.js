@@ -7,7 +7,13 @@ import CallMadeIcon from "@mui/icons-material/CallMade";
 import ArrowForward from "@mui/icons-material/ArrowForward";
 const HomePage = () => {
   return (
-    <Stack height="80vh" direction="row"  justifyContent="space-between" alignItems='center'>
+    <Stack
+      height="80vh"
+      direction="row"
+      justifyContent="space-between"
+      alignItems="center"
+      position="relative"
+    >
       <Box sx={{ width: "50%" }}>
         <Typography
           variant="h2"
@@ -69,13 +75,63 @@ const HomePage = () => {
           </Button>
         </Stack>
       </Box>
-       
+      <Stack
+      gap={4}
+        sx={{
+          position: "absolute",
+          top: "40%",
+          left: "43%",
+          transform: "translate(-50%,-10%)",
+        }}
+      >
+        <Box component="img" src="/images/react.png" sx={{ width: "35px" }} />
+        <Box component="img" src="/images/next.png" sx={{ width: "35px" }} />
+        <Box component="img" src="/images/mui.png" sx={{ width: "35px" }} />
+        <Box
+          component="img"
+          src="/images/tailwind.png"
+          sx={{ width: "35px" }}
+        />
+        <Box component="img" src="/images/express.png" sx={{ width: "35px" }} />
+        <Box
+          component="img"
+          src="/images/firebase.png"
+          sx={{ width: "35px" }}
+        />
+      </Stack>
+      <Box
+        sx={{
+          position: "absolute",
+          top: "30%",
+          left: "50%",
+          transform: "translate(-50%,-10%)",
+        }}
+        component="img"
+        src="/images/line.png"
+      />
+
       <Stack
         alignItems="center"
         gap={2}
         position="relative"
         sx={{ width: "50%" }}
       >
+        <Box
+          component="img"
+          src="/images/linkedIn.png"
+          sx={{ width: "50px", position: "absolute", right: 145, top: -30 }}
+        />
+        <Box
+          component="img"
+          src="/images/github.png"
+          sx={{ width: "50px", position: "absolute", right: 75, top: 40 }}
+        />
+        <Box
+          component="img"
+          src="/images/gmail.png"
+          sx={{ width: "50px", position: "absolute", right: 45, top: 140 }}
+        />
+
         <Stack className="comment1" direction="row" gap={2}>
           <Avatar
             alt="Diganta Kalita IT team"
@@ -94,7 +150,12 @@ const HomePage = () => {
               @digantaKalita
             </Typography>
             <Divider />
-            <Typography className="title-bottom" sx={{ color: "#f3f3f3" }} variant='body2' mt={1}>
+            <Typography
+              className="title-bottom"
+              sx={{ color: "#f3f3f3" }}
+              variant="body2"
+              mt={1}
+            >
               Great Work by Mr. Suman
             </Typography>
           </Stack>
@@ -117,13 +178,18 @@ const HomePage = () => {
               @digantaKalita
             </Typography>
             <Divider />
-            <Typography className="title-bottom" sx={{ color: "#f3f3f3" }} variant='body2' mt={1}>
+            <Typography
+              className="title-bottom"
+              sx={{ color: "#f3f3f3" }}
+              variant="body2"
+              mt={1}
+            >
               Great Work by Mr. Suman
             </Typography>
           </Stack>
         </Stack>
         <Box
-        my='auto'
+          my="auto"
           className="profile-gradient"
           sx={{
             borderRadius: "100vmax",
