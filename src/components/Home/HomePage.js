@@ -3,9 +3,12 @@ import { Box, Stack } from "@mui/system";
 import React from "react";
 import CodeIcon from "@mui/icons-material/Code";
 import MailIcon from "@mui/icons-material/Mail";
-import Head from 'next/head'
+import Head from "next/head";
 import CallMadeIcon from "@mui/icons-material/CallMade";
 import ArrowForward from "@mui/icons-material/ArrowForward";
+import ShowCase from "./ShowCase";
+import Lottie from "lottie-react";
+import Scroll from "../../../public/images/scroll.json";
 const HomePage = () => {
   return (
     <>
@@ -17,8 +20,9 @@ const HomePage = () => {
           rel="stylesheet"
         />
       </Head>
+
       <Stack
-        height="80vh"
+        mt={8}
         direction="row"
         justifyContent="space-between"
         alignItems="center"
@@ -86,22 +90,18 @@ const HomePage = () => {
           </Stack>
         </Box>
         <Stack
-          gap={4}
+          gap={3.5}
           sx={{
             position: "absolute",
             top: "40%",
-            left: "43%",
+            left: "44%",
             transform: "translate(-50%,-10%)",
           }}
         >
           <Box component="img" src="/images/react.png" sx={{ width: "35px" }} />
           <Box component="img" src="/images/next.png" sx={{ width: "35px" }} />
           <Box component="img" src="/images/mui.png" sx={{ width: "35px" }} />
-          <Box
-            component="img"
-            src="/images/tailwind.png"
-            sx={{ width: "35px" }}
-          />
+        
           <Box
             component="img"
             src="/images/express.png"
@@ -116,115 +116,118 @@ const HomePage = () => {
         <Box
           sx={{
             position: "absolute",
-            top: "30%",
-            left: "50%",
+            top: "35%",
+            left: "51%",
             transform: "translate(-50%,-10%)",
           }}
           component="img"
           src="/images/line.png"
         />
-
+      
         <Stack
           alignItems="center"
           gap={2}
           position="relative"
           sx={{ width: "50%" }}
         >
-          <Box
-            component="img"
-            src="/images/linkedin.png"
-            sx={{ width: "50px", position: "absolute", right: 145, top: -30 }}
-          />
-          <Box
-            component="img"
-            src="/images/github.png"
-            sx={{ width: "50px", position: "absolute", right: 75, top: 40 }}
-          />
-          <Box
-            component="img"
-            src="/images/gmail.png"
-            sx={{ width: "50px", position: "absolute", right: 45, top: 140 }}
-          />
-
-          <Stack className="comment1" direction="row" gap={2}>
-            <Avatar
-              alt="Diganta Kalita IT team"
-              sx={{ width: 60, height: 60, border: "1px solid #77bbff" }}
-              src="/images/dk.png"
-            />
-            <Stack>
-              <Typography className="title-bottom" sx={{ color: "#fff" }}>
-                Diganta Kalita IT team
-              </Typography>
-              <Typography
-                className="title-bottom"
-                variant="caption"
-                sx={{ color: "#f3f3f3" }}
-              >
-                @digantaKalita
-              </Typography>
-              <Divider />
-              <Typography
-                className="title-bottom"
-                sx={{ color: "#f3f3f3" }}
-                variant="body2"
-                mt={1}
-              >
-                Great Work by Mr. Suman
-              </Typography>
-            </Stack>
-          </Stack>
-          <Stack className="comment2" direction="row" gap={2}>
-            <Avatar
-              alt="Diganta Kalita IT team"
-              sx={{ width: 60, height: 60, border: "1px solid #77bbff" }}
-              src="/images/dk.png"
-            />
-            <Stack>
-              <Typography className="title-bottom" sx={{ color: "#fff" }}>
-                Diganta Kalita IT team
-              </Typography>
-              <Typography
-                className="title-bottom"
-                variant="caption"
-                sx={{ color: "#f3f3f3" }}
-              >
-                @digantaKalita
-              </Typography>
-              <Divider />
-              <Typography
-                className="title-bottom"
-                sx={{ color: "#f3f3f3" }}
-                variant="body2"
-                mt={1}
-              >
-                Great Work by Mr. Suman
-              </Typography>
-            </Stack>
-          </Stack>
-          <Box
-            my="auto"
-            className="profile-gradient"
-            sx={{
-              borderRadius: "100vmax",
-              overflow: "hidden",
-              height: "350px",
-              width: "350px",
-            }}
-          >
+          <Stack>
             <Box
               component="img"
-              sx={{
-                height: "100%",
-                width: "100%",
-                objectFit: "contain",
-              }}
-              src="/images/suman.png"
-              // sx={{  }}
+              src="/images/linkedin.png"
+              sx={{ width: "50px", position: "absolute", right: 145, top: -30 }}
             />
-          </Box>
+            <Box
+              component="img"
+              src="/images/github.png"
+              sx={{ width: "50px", position: "absolute", right: 75, top: 40 }}
+            />
+            <Box
+              component="img"
+              src="/images/gmail.png"
+              sx={{ width: "50px", position: "absolute", right: 45, top: 140 }}
+            />
+
+            <Stack className="comment1" direction="row" gap={2}>
+              <Avatar
+                alt="Diganta Kalita IT team"
+                sx={{ width: 60, height: 60, border: "1px solid #77bbff" }}
+                src="/images/dk.png"
+              />
+              <Stack>
+                <Typography className="title-bottom" sx={{ color: "#fff" }}>
+                  Diganta Kalita IT team
+                </Typography>
+                <Typography
+                  className="title-bottom"
+                  variant="caption"
+                  sx={{ color: "#f3f3f3" }}
+                >
+                  @digantaKalita
+                </Typography>
+                <Divider />
+                <Typography
+                  className="title-bottom"
+                  sx={{ color: "#f3f3f3" }}
+                  variant="body2"
+                  mt={1}
+                >
+                  Great Work by Mr. Suman
+                </Typography>
+              </Stack>
+            </Stack>
+            <Stack className="comment2" direction="row" gap={2}>
+              <Avatar
+                alt="Diganta Kalita IT team"
+                sx={{ width: 60, height: 60, border: "1px solid #77bbff" }}
+                src="/images/dk.png"
+              />
+              <Stack>
+                <Typography className="title-bottom" sx={{ color: "#fff" }}>
+                  Diganta Kalita IT team
+                </Typography>
+                <Typography
+                  className="title-bottom"
+                  variant="caption"
+                  sx={{ color: "#f3f3f3" }}
+                >
+                  @digantaKalita
+                </Typography>
+                <Divider />
+                <Typography
+                  className="title-bottom"
+                  sx={{ color: "#f3f3f3" }}
+                  variant="body2"
+                  mt={1}
+                >
+                  Great Work by Mr. Suman
+                </Typography>
+              </Stack>
+            </Stack>
+            <Box
+              my="auto"
+              className="profile-gradient"
+              sx={{
+                borderRadius: "100vmax",
+                overflow: "hidden",
+                height: "350px",
+                width: "350px",
+              }}
+            >
+              <Box
+                component="img"
+                sx={{
+                  height: "100%",
+                  width: "100%",
+                  objectFit: "contain",
+                }}
+                src="/images/suman.png"
+                // sx={{  }}
+              />
+            </Box>
+          </Stack>
         </Stack>
       </Stack>
+      <ShowCase />
     </>
   );
 };
