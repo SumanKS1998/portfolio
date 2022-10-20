@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import {
   AppBar,
   Box,
@@ -12,7 +12,23 @@ import {
 import { Stack } from "@mui/system";
 
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
+import { useRouter } from "next/router";
 const Navbar = () => {
+  const [homeFocus, setHomeFocus] = useState(false);
+  const [workFocus, setWorkFocus] = useState(false);
+  const [aboutFocus, setAboutFocus] = useState(false);
+  const router = useRouter();
+  useEffect(() => {
+    if (router.pathname === "/") {
+      setHomeFocus(true);
+    }
+    if (router.pathname === "/about") {
+      setAboutFocus(true);
+    }
+    if (router.pathname === "/work") {
+      setWorkFocus(true);
+    }
+  }, [router]);
   return (
     <AppBar
       sx={{ px: 10, py: 1, boxShadow: "none !important", bgcolor: "#fff" }}
@@ -27,9 +43,16 @@ const Navbar = () => {
           S
         </Typography>
         <List sx={{ width: "33%" }} component={Stack} direction="row" gap={2}>
-          <ListItemButton sx={{ borderRadius: 2, color: "primary.main",'&:hover':{
-            color:'tertiary.main'
-          } }}>
+          <ListItemButton
+            className={homeFocus && 'focus'}
+            sx={{
+              borderRadius: 2,
+              color: "primary.main",
+              "&:hover": {
+                color: "tertiary.main",
+              },
+            }}
+          >
             <Typography
               sx={{ textAlign: "center", width: "100%" }}
               variant="body1"
@@ -37,9 +60,15 @@ const Navbar = () => {
               Home
             </Typography>
           </ListItemButton>
-          <ListItemButton sx={{ borderRadius: 2, color: "primary.main",'&:hover':{
-            color:'tertiary.main'
-          } }}>
+          <ListItemButton
+            sx={{
+              borderRadius: 2,
+              color: "primary.main",
+              "&:hover": {
+                color: "tertiary.main",
+              },
+            }}
+          >
             <Typography
               sx={{ textAlign: "center", width: "100%" }}
               variant="body1"
@@ -47,9 +76,15 @@ const Navbar = () => {
               Work
             </Typography>
           </ListItemButton>
-          <ListItemButton sx={{ borderRadius: 2, color: "primary.main",'&:hover':{
-            color:'tertiary.main'
-          } }}>
+          <ListItemButton
+            sx={{
+              borderRadius: 2,
+              color: "primary.main",
+              "&:hover": {
+                color: "tertiary.main",
+              },
+            }}
+          >
             <Typography
               sx={{ textAlign: "center", width: "100%" }}
               variant="body1"
